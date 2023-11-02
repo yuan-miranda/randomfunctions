@@ -10,6 +10,7 @@ int main(){
     std::vector<int> generatedOdds = GenerateOdd(100);
     std::vector<int> generatedEvens = GenerateEven(100);
     std::string hexValue = "0x80"; // w/o "0x" prefix
+    int massKg = 69; // kilograms
 
     // gcd
     std::cout << "GCD(" << a << ", " << b << ") = " << GCD(a, b) << std::endl;
@@ -40,7 +41,9 @@ int main(){
 
     // convert base16 to base10
     std::string result = Base16ToBase10(hexValue);
-    std::cout << (result != "-1" ? result : "error: input is not hex");
+    std::cout << (result != "-1" ? result : "error: input is not hex") << std::endl;
+
+    std::cout << massKg << "kg = " << Emc2(massKg) << "j" << std::endl;
 
     return 0;
 }

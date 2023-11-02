@@ -10,3 +10,4 @@ bool Even(int number);
 std::vector<int> GenerateOdd(int range);
 std::vector<int> GenerateEven(int range);
 std::string Base16ToBase10(std::string hexString);
+std::uint64_t Emc2(int massKg);
