@@ -1,18 +1,14 @@
-#include"../../header/main.h"
+#include "../../header/main.h"
 
-/**
- * @brief generate odd numbers
- * 
- * @param range generate odd numbers in input range.
- * @return return a integer vector of odd numbers.
- */ 
-std::vector<int> GenerateOdd(int range){
+std::vector<int> GenerateOdd(int range) {
     std::vector<int> odd;
-    for(int i = 0; i <= range; i++){
-        // check if the value has remainder
-        if(i % 2 == 1){
+
+    for(int i = 0; i <= range; i++) {
+        // check if i is odd.
+        if(Odd(i)) {
             odd.push_back(i);
         }
     }
+
     return odd;
 }

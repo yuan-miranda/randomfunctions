@@ -1,49 +1,36 @@
-// meth
-#include<iostream>
-#include<vector>
-#include"../header/main.h"
+#include "../header/main.h"
 
-int main(){
-    // variables to use as example
-    int a = 35, b = 10;
-    int factorialVal = 5;
-    std::vector<int> generatedOdds = GenerateOdd(100);
-    std::vector<int> generatedEvens = GenerateEven(100);
-    std::string hexValue = "0x80"; // w/o "0x" prefix
-    int massKg = 69; // kilograms
-
-    // gcd
-    std::cout << "GCD(" << a << ", " << b << ") = " << GCD(a, b) << std::endl;
-
-    // factorial
-    std::cout << factorialVal << "! = " << Factorial(factorialVal) << std::endl;
-
-    // odd
-    if(Odd(a))
-        std::cout << a << " is odd" << std::endl;
-
-    // even
-    else if(Even(a))
-        std::cout << a << " is even" << std::endl;
-
-    // lcm
-    std::cout << "LCM(" << a << ", " <<  b << ") = " << LCM(a, b) << std::endl;
+int main() {
+    // example use of the functions.
     
-    // generate odd numbers
-    for(int odds : generatedOdds)
-        std::cout << odds << ", ";
-    std::cout << std::endl;
-    
-    // generate even numbers
-    for(int evens : generatedEvens)
-        std::cout << evens << ", ";
+    int arr[] = {1, 2, 4, 5, 6, 10, 13};
+    int target = 6;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    std::cout << BinarySearchArray(arr, 0, n - 1, target) << std::endl;
+
+    std::cout << EmcSquared(205) << std::endl;
+
+    std::cout << Even(4) << std::endl;
+
+    std::cout << Factorial(5) << std::endl;
+
+    std::cout << GCD(54, 68) << std::endl;
+
+    for(int num : GenerateEven(50)) {
+        std::cout << num << ", ";
+    }
     std::cout << std::endl;
 
-    // convert base16 to base10
-    std::string result = Base16ToBase10(hexValue);
-    std::cout << (result != "-1" ? result : "error: input is not hex") << std::endl;
+    for(int num : GenerateOdd(50)) {
+        std::cout << num << ", ";
+    }
+    std::cout << std::endl;
 
-    std::cout << massKg << "kg = " << Emc2(massKg) << "j" << std::endl;
+    std::cout << HexToDec("423476F") << std::endl;
+
+    std::cout << LCM(34, 50) << std::endl;
+
+    std::cout << Odd(39) << std::endl;
 
     return 0;
 }

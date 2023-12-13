@@ -1,5 +1,5 @@
 # randomfunctions
-compilations of my functions created in C++, mostly implementing math function and equations.
+compilations of my functions created in C++, mostly implementing math functions, algorithms, and equations.
 
 ### Build in terminal
 ```shell
@@ -23,18 +23,21 @@ randomfunctions/
 |  |  main.h
 |  src/
 |  |  functions/
-|  |  |  base16tobase10.cpp
+|  |  |  binarysearcharray.cpp
+|  |  |  emcsquared.cpp
 |  |  |  even.cpp
 |  |  |  factorial.cpp
 |  |  |  gcd.cpp
 |  |  |  generateeven.cpp
 |  |  |  generateodd.cpp
+|  |  |  hextodec.cpp
 |  |  |  lcm.cpp
 |  |  |  odd.cpp
 |  |  main.cpp
 |  .gitignore
+|  README.md
 
 ```
 - `folder/` - folders.
 - `file.cpp/h/json` - files.
-- `|  ` - used to represent the file hierarchy.
+- `|  ` - used to represent the file hierarchy level.
